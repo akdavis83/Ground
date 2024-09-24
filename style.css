@@ -1,0 +1,111 @@
+html,body,div,p,span{
+  margin:0;
+  padding:0;
+}
+html,body{
+  height:100%;
+  width:100%;
+  overflow:hidden;
+}
+
+#viewport{
+  height:100%;
+  width:100%;
+  overflow:hidden;
+  cursor:crosshair;
+  background-color:rgb(0, 0, 0);
+  -webkit-perspective:700px;
+  -moz-perspective:700px;
+  -o-perspective:700px;
+  -ms-perspective:700px;
+  perspective:700px;
+  -webkit-transform-style:preserve-3d;
+  -moz-transform-style:preserve-3d;
+  -o-transform-style:preserve-3d;
+  -ms-transform-style:preserve-3d;
+  transform-style:preserve-3d;
+}
+
+#camera{
+  left:50%;
+  top:50%;
+}
+
+#world{
+  left:50%;
+  top:50%;
+  -webkit-transform:translateY(720px) translateZ(-3500px) translateX(-1500px);
+  -moz-transform:translateY(720px) translateZ(-3500px) translateX(-1500px);
+  -o-transform:translateY(720px) translateZ(-3500px) translateX(-1500px);
+  -ms-transform:translateY(720px) translateZ(-3500px) translateX(-1500px);
+  transform:translateY(720px) translateZ(-3500px) translateX(-1500px);
+}
+
+#ground{
+  height:3000px;
+  width:3000px;
+  background-color:SaddleBrown;
+  background-image:url(http://www.colourbox.com/preview/7969904-844245-cracked-brown-soil-seamless-tileable-texture.jpg);
+  background-size:10%;
+  -webkit-backface-visibility:hidden;
+  backface-visibility:hidden;
+  -webkit-transform:rotateX(90deg);
+  -moz-transform:rotateX(90deg);
+  -o-transform:rotateX(90deg);
+  -ms-transform:rotateX(90deg);
+  transform:rotateX(90deg);
+  -webkit-transform-origin:0% 0%;
+  -moz-transform-origin:0% 0%;
+  -o-transform-origin:0% 0%;
+  -ms-transform-origin:0% 0%;
+  transform-origin:0% 0%;
+}
+
+#fps{
+  margin:0px 0px 0px 4px;
+  display:none;
+  position:fixed;
+  bottom:0;
+  left:0;
+  z-index:999;
+  color: #000000;
+  font-family:Helvetica,Arial,sans-serif;
+  font-size:15px;
+  font-weight:900;
+  text-shadow:
+   -1px -1px 0 #FFFFFF,  
+    1px -1px 0 #FFFFFF,
+    -1px 1px 0 #FFFFFF,
+     1px 1px 0 #FFFFFF;
+}
+#fps:before{
+  content:'FPS: ';
+}
+
+.object{
+  position:absolute;
+  -webkit-transform-style:preserve-3d;
+  -moz-transform-style:preserve-3d;
+  -o-transform-style:preserve-3d;
+  -ms-transform-style:preserve-3d;
+  transform-style:preserve-3d;
+}
+
+/* */
+
+#ball{
+  height:9px;
+  width:9px;
+  background-color:transparent;
+  bottom:50%;
+  left:50%;
+  -webkit-transform:translateZ(1500px);
+}
+#ball .face{
+  height:100%;
+  width:100%;
+  border-radius:100%;
+  -webkit-transform-origin:100% 100%;
+  -webkit-transform:rotateX(-90deg);
+  background-color:inherit;
+}
